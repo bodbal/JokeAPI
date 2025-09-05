@@ -5,15 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
+    <script src="joke.js"></script>
 </head>
 <body>
     <div class="navbar">
-        <a href="#home">Főoldal</a>
-        <a href="#jokebyid">Vicc keresés</a>
-        <a href="#randomjoke">Random vicc</a>
-        <a href="#category">Kategóriák</a>
+        <a href="#" onclick="showDiv('homeDiv')">Főoldal</a>
+        <a href="#" onclick="showDiv('idDiv')">Vicc keresés</a>
+        <a href="#" onclick="showDiv('randomDiv')">Random vicc</a>
+        <a href="#" onclick="showDiv('typeDiv')">Kategóriák</a>
     </div>
 
-    
+    <div id="homeDiv">
+        <h2>Üdvözöllek a vicc oldalon!</h2>
+        <p>Válassz a fenti menüből egy funkciót.</p>
+    </div>
+
+    <div id="randomDiv" style="display:none;">
+        <button onclick="getRandomJoke()">Új random vicc</button>
+    </div>
+
+    <div id="idDiv" style="display:none;">
+        <input type="text" id="jokeId" placeholder="Vicc ID">
+        <button onclick="getJokesById()">Keresés ID alapján</button>
+    </div>
+
+    <div id="typeDiv" style="display:none;">
+        <input type="text" id="jokeType" placeholder="Vicc típusa">
+        <button onclick="getJokesByType()">Keresés típus alapján</button>
+    </div>
+
+    <div id="joke"></div>
 </body>
 </html>
