@@ -30,7 +30,12 @@
     </div>
 
     <div id="typeDiv" style="display:none;">
-        <input type="text" id="jokeType" placeholder="Vicc típusa">
+        <select  id="jokeType">
+            <option value="">Válassz típust</option>
+            <option value="general" id="general">General</option>
+            <option value="programming" id="programming">Programming</option>
+            <option value="knock-knock">Knock-Knock</option>
+        </select>
         <button onclick="getJokesByType()">Keresés típus alapján</button>
     </div>
 
